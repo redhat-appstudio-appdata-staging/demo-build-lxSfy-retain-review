@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: demo-build
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads-stage/otikhomi-tenant/demo-build/demo-build@sha256:b89c3187df9cb668e07825e75ae340a7b7b3285c36caa4060a0e4188f9aea144
+        name: my-java-springboot
+        resources: {}
+status: {}
